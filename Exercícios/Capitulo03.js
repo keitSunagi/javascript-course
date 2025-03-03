@@ -44,7 +44,7 @@ let increment = mYContext();
 
 /* -----------------------------------------------------------------------------------------------------------------------*/
 //EXERCÍCIOS
-//EXERCÍCIOS 01 - MÍNIMO - Crie uma função para descobrir o valor mínimo dado dois valores.
+//EXERCÍCIO 01 - MÍNIMO - Crie uma função para descobrir o valor mínimo dado dois valores.
 function min(x,y){
     if(x < y){
         return x;
@@ -52,5 +52,18 @@ function min(x,y){
         return y;
     }
 }
+//EXERCICIO 02 - RECURSÃO - 
+function isEven(n){
+    if(n == 1){
+        return false;
+    }
+    if(n == 0){
+        return true;
+    }
+    else{
+        isEven(n-2);
+    }
 
-console.log(min(1,5));
+}
+
+console.log(isEven(10));
