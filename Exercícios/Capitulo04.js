@@ -41,13 +41,14 @@ function brincando(){
         const js = fs.readFileSync("files.json", 'utf-8');
         //Ler arquivo JSON e converter o danado pra um objeto.
         final = JSON.parse(js);
+        console.log(`Nome: ${final.Name} - Idade: ${final.Age} - Data de Nascimento: ${final.BirthDate}`);
     } catch (error) {
-        ErroDeArquivo();
+        ErroDeArquivo(error);
     }
-    console.log(`Nome: ${final.Name} - Idade: ${final.Age} - Data de Nascimento: ${final.BirthDate}`);
+    
 }
-function ErroDeArquivo(){
-    console.log("Arquivo não encontrado");
+function ErroDeArquivo(erro){
+    console.log("Arquivo não encontrado / ", erro);
 }
 brincando();
 
