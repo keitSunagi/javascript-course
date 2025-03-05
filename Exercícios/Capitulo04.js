@@ -48,9 +48,40 @@ function brincando(){
     
 }
 function ErroDeArquivo(erro){
-    console.log("Arquivo não encontrado / ", erro);
+    console.log("Arquivo não encontrado / ", String(erro).toUpperCase());
 }
-brincando();
-
+//Os três pontinhos fala que pode receber quantos parâmetros de entrada forem necessários na função.
+function somar(numbers){
+    let result = 0;
+    //Funciona como um FOREACH
+    for (let num of numbers){
+        result += num
+    }
+    return "Soma: "+ result + " // Array:" + String(numbers);
+}
+//Exercício 01 - SOMA DE UM RANGE - Escrever uma função que receba dois parâmetros e escreva na tela uma array com todos os numeros entre eles.
+function RangeF(start,end){
+    let rangeNumbers = [];
+    for (let i = start; i <= end; i++){
+        rangeNumbers.push(i);
+    }
+    return rangeNumbers;
+}
+//Só brincando só
+function SomaDeIguais(numbers){
+    let n = 0;
+    for(let x=0; x <= numbers.length;x++){
+        n = x;
+        let numerozinho = 0;
+        for(let i = 0; i <= numbers.length;  i++){
+            if(numbers[i] == n){
+                numerozinho += 1;
+            }
+        }
+        if(numerozinho != 0 && numerozinho != 1){
+            console.log(`O número ${n} se repetiu ${numerozinho} vezes`);
+        }
+    }
+}
 
 
